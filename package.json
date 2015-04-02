@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zdlopez/minesweeper-react",
   "dependencies": {
+    "jquery": "^2.1.3",
     "react": "^0.13.1",
     "react-tools": "^0.13.1"
   }
