@@ -5,5 +5,7 @@
   "MINIFIED_OUT": "build.min.js",
   "DEST_SRC": "dist/src",
   "DEST_BUILD": "dist/build",
-  "DEST": "dist"
+  "DEST": "dist",
+  "OUT": "build.js",
+  "ENTRY_POINT": "./src/js/main.js"
 }
