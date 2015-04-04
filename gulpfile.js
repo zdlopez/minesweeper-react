@@ -6,6 +6,8 @@ var browserify = require('browserify');
 var watchify = require('watchify');
 var reactify = require('reactify');
 var streamify = require('streamify');
+var htmlreplace = require('gulp-html-replace');
+//var uglify = require('uglify');
 
 gulp.task('copy', function(){
   gulp.src(path.HTML)
@@ -33,7 +35,7 @@ gulp.task('watch', function() {
     .pipe(gulp.dest(path.DEST_SRC));
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['copy', 'watch']);
 
 
 gulp.task('build', function(){
@@ -49,7 +51,7 @@ gulp.task('build', function(){
 
 gulp.task('replaceHTML', function(){
   gulp.src(path.HTML)
-    .pipe($.htmlreplace({
+    .pipe(htmlreplace({
       'js': 'build/' + path.MINIFIED_OUT
     }))
     .pipe(gulp.dest(path.DEST));

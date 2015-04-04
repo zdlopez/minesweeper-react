@@ -5,7 +5,7 @@ var Board = React.createClass({
     //var board = createBoard();
 
     return {
-      board: 5
+      board: myboard
     }
   }, 
 
@@ -17,3 +17,9 @@ var Board = React.createClass({
 });
 
 React.render(<Board />, document.getElementById('container'));
+
+var myboard = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
